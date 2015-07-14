@@ -2,10 +2,23 @@
 
 ### Lesson I.
 - basic language syntax
-- flow control
-- operators
-- const and references
+- datatypes
 - constructor calls
+- streams
+- flow control
+- scope
+- operators
+- Visual Studio 2013 features
+
+Practical task
+
+### Lesson II.
+- includes
+- function calls
+- dynamic casting
+- const and references
 - ranged for
 - "auto" keyword
-    
+- classes
+
+Practical task
