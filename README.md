@@ -2,11 +2,11 @@
 
 ### Lesson I.
 - basic language syntax
+- scope
 - datatypes
 - constructor calls
 - streams
 - flow control
-- scope
 - operators
 - Visual Studio 2013 features
 
