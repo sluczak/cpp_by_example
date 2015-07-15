@@ -3,23 +3,26 @@
 using namespace std;
 
 int main() {
-	double a = 2;
-	int b = 5;
-	double result;
+	int a{ 10 };
+	int b{ 2 };
+	int c{ 3 };
 
-	result = ((a + b) * (3 - 1)) / 5;
+	double d = (a - b) / c; 
+	cout << "Equation double d = (a - b) / c; evaluates as integer, even though d is a double variable" << endl;
+	cout << "double d = (a - b) / c = " << d << endl << endl;
+	
+	d = static_cast<double>(a - b) / c;
+	cout << "after explicit static cast of first equation part, equation evaluates as double" << endl;
+	cout << "double d = static_cast<double>(a - b) / c = " << d << endl << endl;
+	
+	d = (double)(a - b) / c;
+	cout << "C-like casting also works" << endl;
+	cout << "double d = (double)(a - b) / c; = " << d << endl << endl;
 
-	cout << "This is a result of double arithmetic operations " <<  result << endl;
+	d = static_cast<double>((a - b) / c);
+	cout << "!!Remember that casting of whole equation won't give a good result!" << endl;
+	cout << "d = static_cast<double>((a - b) / c = " << d << endl << endl;
+	cout << "!!It is because compiler evaluates (a - b) as an integer... :("  << endl;
 
-	int d = -b;
-
-	cout << "b was: " << b << " d is a negation of b: " << d << endl;
-
-	bool isFree = true;
-	bool isHungry = false;
-	bool isHappy = true;
-	if (isFree && !isHungry || isHappy) {
-		cout << "I am free, NOT hungry and happy OR unhappy!" << endl;
-	}
 	return 0;
 }
