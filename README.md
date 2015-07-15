@@ -1,3 +1,3 @@
 # C++ basics
 
-[Tutorial lessons](../../wiki)
+[Tutorial lessons](../../wikis/home)
