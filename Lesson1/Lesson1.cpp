@@ -1,10 +1,25 @@
 #include <iostream>
 
+using namespace std;
+
+namespace differentNamespace {
+	int sth() {
+		cout << "some differentNamespace" << endl;
+		return 1;
+	}
+}
+
+namespace evenMoreDifferentNamespace {
+	int sth() {
+		cout << "some evenMoreDifferentNamespace" << endl;
+		return 1;
+	}
+}
+
+using evenMoreDifferentNamespace::sth;
+
 int main() {
-	std::cout << "Hello, how old are you?" << std::endl;
-	int age;
-	std::cin >> age;
-	std::cout << "Your age is " << age << std::endl;
-	std::cout << "I " << "concatenate " << std::endl << "STREAMS" << "!" << std::endl;
+	differentNamespace::sth();
+	sth();
 	return 0;
 }
